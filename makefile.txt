@@ -1,0 +1,11 @@
+all: alr.psd .SYMBOLIC
+
+alr.psd:
+  wcc386 -ms -s -br -4s -i=. main.c
+  wasm -4 -ms -zcm entry.asm
+  wlink name alr.psd @alr.lnk file {entry.obj main.obj}
+
+clean: .SYMBOLIC
+CLEANEXTS   = obj exe err lst map sym lib dll bak psd
+  @for %a in ($(CLEANEXTS))  do -@rm *.%a
+  @echo Clean complete.

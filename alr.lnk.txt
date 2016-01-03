@@ -1,0 +1,10 @@
+SYSTEM os2v2_dll
+
+EXPORT  PSD_INSTALL           = Install
+EXPORT  PSD_DEINSTALL         = DeInstall
+EXPORT  PSD_INIT              = Init
+EXPORT  PSD_PROC_INIT         = ProcInit
+EXPORT  PSD_START_PROC        = StartProcessor
+EXPORT  PSD_GET_NUM_OF_PROCS  = GetNumOfProcs
+EXPORT  PSD_GEN_IPI           = GenIPI
+EXPORT  PSD_END_IPI           = EndIPI
